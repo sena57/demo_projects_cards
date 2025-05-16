@@ -1,17 +1,15 @@
 import React from 'react'
 
-interface CardProps {
-  name: string;
-  title: string;
-  imageUrl: string;
-}
-
-export default function Card({ name, title, imageUrl }: CardProps) {
+export default function Card({ name, title, imageUrl }: { name: string; title: string; imageUrl: string }) {
   return (
-    <div className='border m-5'>
-      <h2>{name}</h2>
-      <h4>{title}</h4>
-      <img src={imageUrl} alt={name} />
+    <div className='border flex h-40'>
+      <div>
+        <h2>{name}</h2>
+        <h4>{title}</h4>
+      </div>
+      <div className='bg-green-400 w-full'>
+        <img src={imageUrl} alt={name} className='object-cover w-full h-full'/>
+      </div>
     </div>
   )
 }

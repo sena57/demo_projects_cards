@@ -5,7 +5,7 @@ export default function PeopleContainer() {
   return (
     <div>
       <h1>People</h1>
-      <div>
+      <div className='w-40'>
         <Card name="hans" title="ceo" imageUrl='https://picsum.photos/200/300'/>
       </div>
     </div>
